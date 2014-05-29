@@ -52,7 +52,7 @@ The second step uses `the maven-resources-plugin` copies any files from `${based
             </plugin>
 ```
 
-The third step uses the `lesscss-maven-plugin` to compile any less files in the `generated-resources` directory.  Because not all of the less files in bootstrap are individually compilable (they are each included in a specific order), I couldn't use a wild-card.  But you can have multiple `<include>` definitions, including wildcards such as `<include>**/*.less</include>` which would try to compile any 
+The third step uses the `lesscss-maven-plugin` to compile any less files in the `generated-resources` directory.  Because not all of the less files in bootstrap are individually compilable (they are each included in a specific order), I couldn't use a wild-card.  But you can have multiple `<include>` definitions, including wildcards such as `<include>**/*.less</include>` which would try to compile any Less files at any depth under the `<sourceDirectory>`
 
 ```
             <plugin>
